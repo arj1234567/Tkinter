@@ -1,0 +1,18 @@
+from tkinter import *
+from tkinter import Menu
+window=Tk()
+window.title("welcome to tkinter")
+window.geometry("500x400")
+menu = Menu(window)
+item = Menu(menu)
+item.add_command(label="edit")
+item.add_separator()
+item.add_command(label="tools")
+item1 = Menu(menu)
+item1.add_command(label="save")
+item1.add_separator()
+item1.add_command(label="open")
+menu.add_cascade(label="file",menu=item1)
+menu.add_cascade(label="New",menu=item)
+window.config(menu=menu)
+window.mainloop()
